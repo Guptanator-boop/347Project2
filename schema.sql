@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS memory;
+DROP TABLE IF EXISTS review;
 
 CREATE TABLE review (
     username TEXT,
@@ -6,5 +6,5 @@ CREATE TABLE review (
     rating INT,
     message TEXT, 
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
