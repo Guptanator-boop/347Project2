@@ -24,6 +24,11 @@ function rowToObject(row) {
   }
 }
 
+const port = 3001;
+app.listen(port, () => {
+  console.log(`We live on port ${port}!`);
+});
+
 //Get from database
 app.get('/reviews/:movie_name', (request, response) => {
   const query = 'SELECT username, movie_name, rating, message FROM review ORDER BY created_at DESC';
@@ -70,7 +75,3 @@ app.delete('/reviews:id', (request, response) => {
   });
 });
 
-const port = 443;
-app.listen(port, () => {
-  console.log(`We live on port ${port}!`);
-});
