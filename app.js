@@ -24,7 +24,7 @@ function rowToObject(row) {
   }
 }
 
-const port = 3001;
+const port = 3002;
 app.listen(port, () => {
   console.log(`We live on port ${port}!`);
 });
