@@ -31,7 +31,7 @@ app.listen(port, () => {
 
 //Get from database
 app.get('/reviews/:movie_name', (request, response) => {
-  const query = 'SELECT username, movie_name, rating, message FROM review ORDER BY created_at DESC';
+  const query = 'SELECT username, movie_name, rating, message FROM review WHERE movie_name = ? ORDER BY created_at DESC';
   const params = [request.params.movie_name];
   connection.query(query, params, (error, rows) => {
     response.send({
